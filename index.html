@@ -1,5 +1,31 @@
-<h1>Mi Aplicacion</h1>
-<h2>Encabezados de secciones.</h2>
-<h3>Sub-secciones.</h3>
-<h5>Esta es una etiqueta H5.</h5>
-<h6>Esta es una etiqueta H6.</h6>
+<form action="" class="flex flex-col items-center bg-white relative login-form">
+    <header>
+        <img src="../../../../assets/LogoGreenManagerGreen.png" class="m-auto">
+        <h1 class="!mt-6 !mb-4" >Iniciar Sesión</h1>
+        <p class="inline">Inicie sesión para continuar a Green Manager</p>
+    </header>
+    <div class="px-10 pb-6 w-full flex flex-col flex-1 justify-content-center">
+        <mat-form-field [appearance]="'outline'">
+            <mat-label>
+                <mat-icon class="mr-2">person</mat-icon>
+                Nombre de Usuario
+            </mat-label>
+            <input name="user" [(ngModel)]="usr_user" matInput type="email" placeholder="Nombre de Usuario">
+        </mat-form-field>
+        <mat-form-field [appearance]="'outline'">
+            <mat-label>
+                <mat-icon class="mr-2">
+                    vpn_key
+                </mat-icon>
+                Contraseña
+            </mat-label>
+            <input name="password" matInput [(ngModel)]="usr_pass" type="password" placeholder="Contraseña">
+        </mat-form-field>
+
+        <button (click)="login()" type="submit" class="mt-2 font-medium py-3 px-4 bord rounded shadow login-button text-white" placeholder="Iniciar Sesión">
+            Iniciar Sesión
+        </button>
+
+        <a href="" class="text-center underline link mt-6">Olvidé mi contraseña</a>
+    </div>
+</form>
